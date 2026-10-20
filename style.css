@@ -255,9 +255,12 @@ form.is-error {
   background: linear-gradient(180deg, transparent 55%, rgba(180, 53, 53, 0.13));
 }
 
-.portrait svg {
+.portrait img {
+  display: block;
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
   filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.48));
 }
 
