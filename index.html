@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090b0d" />
+    <meta name="description" content="学園祭謎解き・証言記録" />
+    <title>証言記録</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <p class="nfc-label" aria-label="NFC番号">
+        <span>NFC</span>
+        <strong id="nfc-number">---</strong>
+      </p>
+
+      <section class="lock-screen" id="lock-screen" aria-labelledby="lock-title">
+        <div class="lock-mark" aria-hidden="true">
+          <span></span>
+        </div>
+        <p class="eyebrow">CONFIDENTIAL RECORD</p>
+        <h1 id="lock-title">証言記録へのアクセス</h1>
+        <p class="lock-copy">カタカナの合言葉を入力してください。</p>
+
+        <form id="password-form" novalidate>
+          <label for="password">合言葉</label>
+          <div class="input-row">
+            <input
+              id="password"
+              name="password"
+              type="text"
+              inputmode="text"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+              placeholder="カタカナで入力"
+              maxlength="32"
+              required
+            />
+            <button type="submit">照合</button>
+          </div>
+          <p class="form-message" id="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <article class="testimony" id="testimony" tabindex="-1" hidden>
+        <header class="profile">
+          <div class="portrait" aria-hidden="true">
+            <svg viewBox="0 0 240 300" role="img">
+              <defs>
+                <linearGradient id="silhouette" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#30363a" />
+                  <stop offset="1" stop-color="#111518" />
+                </linearGradient>
+              </defs>
+              <circle cx="120" cy="91" r="57" fill="url(#silhouette)" />
+              <path
+                d="M22 300c3-67 29-115 75-132 7-3 15-4 23-4s16 1 23 4c46 17 72 65 75 132H22Z"
+                fill="url(#silhouette)"
+              />
+              <path d="M88 145h64v43H88z" fill="#1b2023" />
+            </svg>
+          </div>
+          <div class="identity">
+            <p class="eyebrow">WITNESS STATEMENT</p>
+            <h1 id="witness-name">容疑者A</h1>
+            <p class="record-state"><span></span> 証言記録・再生中</p>
+          </div>
+        </header>
+
+        <section class="statement" aria-labelledby="statement-title">
+          <div class="statement-heading">
+            <p id="statement-title">証言</p>
+            <span aria-hidden="true">REC</span>
+          </div>
+          <blockquote id="statement-text"></blockquote>
+        </section>
+
+        <footer>
+          <span>END OF RECORD</span>
+          <button id="lock-again" type="button">証言を閉じる</button>
+        </footer>
+      </article>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
