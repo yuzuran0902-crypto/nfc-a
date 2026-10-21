@@ -3,80 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#090b0d" />
-    <meta name="description" content="学園祭謎解き・証言記録" />
+    <meta name="robots" content="noindex" />
     <title>証言記録</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="refresh" content="0; url=0/" />
+    <script>location.replace("0/");</script>
   </head>
-  <body>
-    <main class="page-shell">
-      <p class="nfc-label" aria-label="NFC番号">
-        <span>NFC</span>
-        <strong id="nfc-number">---</strong>
-      </p>
-
-      <section class="lock-screen" id="lock-screen" aria-labelledby="lock-title">
-        <div class="lock-mark" aria-hidden="true">
-          <span></span>
-        </div>
-        <p class="eyebrow">CONFIDENTIAL RECORD</p>
-        <h1 id="lock-title">証言記録へのアクセス</h1>
-        <p class="lock-copy">カタカナの合言葉を入力してください。</p>
-
-        <form id="password-form" novalidate>
-          <label for="password">合言葉</label>
-          <div class="input-row">
-            <input
-              id="password"
-              name="password"
-              type="text"
-              inputmode="text"
-              autocomplete="off"
-              autocapitalize="off"
-              spellcheck="false"
-              placeholder="カタカナで入力"
-              maxlength="32"
-              required
-            />
-            <button type="submit">照合</button>
-          </div>
-          <p class="form-message" id="form-message" aria-live="polite"></p>
-        </form>
-      </section>
-
-      <article class="testimony" id="testimony" tabindex="-1" hidden>
-        <header class="profile">
-          <div class="portrait">
-            <img
-              src="suspect-a.png"
-              alt="昆虫採集網とノートを持つ容疑者Aのシルエット"
-              width="1122"
-              height="1402"
-            />
-          </div>
-          <div class="identity">
-            <p class="eyebrow">WITNESS STATEMENT</p>
-            <h1 id="witness-name">容疑者A</h1>
-            <p class="record-state"><span></span> 証言記録・再生中</p>
-          </div>
-        </header>
-
-        <section class="statement" aria-labelledby="statement-title">
-          <div class="statement-heading">
-            <p id="statement-title">証言</p>
-            <span aria-hidden="true">REC</span>
-          </div>
-          <blockquote id="statement-text"></blockquote>
-        </section>
-
-        <footer>
-          <span>END OF RECORD</span>
-          <button id="lock-again" type="button">証言を閉じる</button>
-        </footer>
-      </article>
-    </main>
-
-    <script src="config.js"></script>
-    <script src="script.js"></script>
-  </body>
+  <body><p><a href="0/">証言記録を開く</a></p></body>
 </html>
