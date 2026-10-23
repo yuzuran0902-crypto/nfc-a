@@ -79,6 +79,82 @@ body::before {
   color: #555;
 }
 
+.truth-page {
+  color-scheme: dark;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(151, 0, 0, 0.24), transparent 38rem),
+    #080000;
+}
+
+.truth-page::before {
+  opacity: 0.18;
+}
+
+.truth-shell {
+  width: min(100% - 28px, 920px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: clamp(18px, 4vw, 42px) 0 clamp(34px, 7vw, 72px);
+}
+
+.truth-visual {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 207, 71, 0.35);
+  background: #170000;
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.68),
+    0 0 48px rgba(195, 16, 16, 0.12);
+}
+
+.truth-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.truth-actions {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.truth-button {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 211, 83, 0.48);
+  color: #fff8e6;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.truth-button:hover,
+.truth-button:focus-visible {
+  border-color: #ffe174;
+  transform: translateY(-2px);
+}
+
+.truth-button-save {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.truth-button-video {
+  color: #210000;
+  background: linear-gradient(135deg, #ffe56d, #ffae22);
+  box-shadow: 0 12px 34px rgba(255, 154, 0, 0.2);
+}
+
+.truth-button-video:hover,
+.truth-button-video:focus-visible {
+  background: linear-gradient(135deg, #fff08b, #ffc044);
+}
+
 button,
 input {
   font: inherit;
@@ -471,6 +547,20 @@ blockquote {
 
   .record-state {
     font-size: 0.64rem;
+  }
+
+  .truth-shell {
+    width: min(100% - 20px, 920px);
+    padding-top: 10px;
+  }
+
+  .truth-actions {
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+  }
+
+  .truth-button {
+    min-height: 54px;
   }
 }
 
