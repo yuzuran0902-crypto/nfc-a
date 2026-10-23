@@ -49,6 +49,7 @@
   const form = document.querySelector("#password-form");
   const input = document.querySelector("#password");
   const message = document.querySelector("#form-message");
+  const lockCopy = document.querySelector(".lock-copy");
   const lockAgain = document.querySelector("#lock-again");
   const witnessImage = document.querySelector("#witness-image");
   const portraitFallback = document.querySelector("#portrait-fallback");
@@ -60,6 +61,7 @@
 
   document.querySelector("#nfc-number").textContent = config.nfcNumber;
   document.querySelector("#witness-name").textContent = config.witnessName;
+  lockCopy.textContent = config.lockMessage || "あいことばを入力してください。";
   document.title = `${config.witnessName}｜証言記録`;
 
   if (config.image) {
