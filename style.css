@@ -519,6 +519,22 @@ blockquote {
   letter-spacing: 0.035em;
 }
 
+.evidence-image {
+  margin: 0 clamp(12px, 4vw, 38px) clamp(30px, 6vw, 50px);
+  border: 1px solid rgba(23, 26, 28, 0.28);
+  background: #fff;
+}
+
+.evidence-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.statement-text-after {
+  padding-top: 0;
+}
+
 .testimony footer {
   display: flex;
   align-items: center;

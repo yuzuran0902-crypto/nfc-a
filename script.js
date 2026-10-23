@@ -39,6 +39,10 @@
         <section class="statement" aria-labelledby="statement-title">
           <div class="statement-heading"><p id="statement-title">証言</p><span aria-hidden="true">REC</span></div>
           <blockquote id="statement-text"></blockquote>
+          <figure class="evidence-image" id="evidence-image" hidden>
+            <img src="" alt="" width="1920" height="752" />
+          </figure>
+          <blockquote class="statement-text-after" id="statement-text-after" hidden></blockquote>
         </section>
         <footer><span>END OF RECORD</span><button id="lock-again" type="button">証言を閉じる</button></footer>
       </article>
@@ -55,6 +59,9 @@
   const portraitFallback = document.querySelector("#portrait-fallback");
   const statementTitle = document.querySelector("#statement-title");
   const statementText = document.querySelector("#statement-text");
+  const statementTextAfter = document.querySelector("#statement-text-after");
+  const evidenceImage = document.querySelector("#evidence-image");
+  const evidenceImg = evidenceImage.querySelector("img");
   const storageKey = `witness-record-open:${pageKey}`;
 
   const normalize = (value) => value.normalize("NFKC").replace(/[\s　]+/g, "").toUpperCase();
@@ -73,8 +80,18 @@
 
   const openRecord = (recordType = "primary") => {
     const showFollowup = recordType === "followup" && config.followupTestimony;
+    const showEvidence = !showFollowup && config.evidenceImage;
     statementTitle.textContent = showFollowup ? "再調査の証言" : "証言";
-    statementText.textContent = showFollowup ? config.followupTestimony : config.testimony;
+    statementText.textContent = showFollowup
+      ? config.followupTestimony
+      : (config.testimonyBeforeEvidence || config.testimony);
+    evidenceImage.hidden = !showEvidence;
+    statementTextAfter.hidden = !showEvidence;
+    if (showEvidence) {
+      evidenceImg.src = config.evidenceImage;
+      evidenceImg.alt = config.evidenceAlt;
+      statementTextAfter.textContent = config.testimonyAfterEvidence || "";
+    }
     sessionStorage.setItem(storageKey, showFollowup ? "followup" : "primary");
     lockScreen.hidden = true;
     testimony.hidden = false;
