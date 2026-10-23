@@ -40,7 +40,7 @@
           <div class="statement-heading"><p id="statement-title">証言</p><span aria-hidden="true">REC</span></div>
           <blockquote id="statement-text"></blockquote>
           <figure class="evidence-image" id="evidence-image" hidden>
-            <img src="" alt="" width="1920" height="752" />
+            <img src="" alt="" width="1913" height="714" />
           </figure>
           <blockquote class="statement-text-after" id="statement-text-after" hidden></blockquote>
         </section>

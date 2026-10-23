@@ -37,7 +37,7 @@ window.SITE_CONFIG = {
 
 この紙だね。なんなんだろう？`,
       testimonyAfterEvidence: `そう言えば、研ちゃんは、古本とか、原稿の仕掛けがどうだとか言ってたなぁ。なんのことなんだろう？`,
-      evidenceImage: "../friend-paper.png",
+      evidenceImage: "../friend-paper.png?v=20261024",
       evidenceAlt: "研ちゃんから渡された、AからEまでの謎と解答欄が描かれた紙",
     },
     "2": {
